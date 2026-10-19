@@ -468,12 +468,11 @@ task.spawn(function()
     end
 end)
 
--- Simple custom UI template (draggable window, title, 2 buttons, close button)
--- Edit the values in the SETTINGS section to change how it looks.
-
-local Players = game:GetService("Players")
-local UserInputService = game:GetService("UserInputService")
-local player = Players.LocalPlayer
-
--- ===== SETTINGS (change these) =====
-lo
+-- ==================== UI (kompak) ====================
+local function new(class, props, children)
+    local inst = Instance.new(class)
+    for k, v in pairs(props or {}) do inst[k] = v end
+    for _, child in ipairs(children or {}) do child.Parent = inst end
+    return inst
+end
+local function corner(r) return new("UICorner", 
