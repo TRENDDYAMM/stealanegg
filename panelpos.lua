@@ -17,7 +17,7 @@
 local MY_RUN = os.clock()
 getgenv().__PANELPOS_ACTIVE = MY_RUN
 
-local LOADER_URL = "https://raw.githubusercontent.com/JualNasiRendang/loader/refs/heads/main/panelpos.lua"
+local LOADER_URL = "loadstring(game:HttpGet("https://raw.githubusercontent.com/TRENDDYAMM/stealanegg/main/loader.lua"))()"
 
 local function keepPos(win)
     pcall(function()
